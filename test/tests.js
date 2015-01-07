@@ -26,7 +26,7 @@ test(function(t) {
 
 test(function(t) {
   t.plan(1)
-  exec('echo \'{"foo": "bar"}\n{"baz": "taco"}\' | jsonreduce \'this.keys = this.keys.concat(Object.keys(current))\' --memo \'{"keys": []}\'', function(err, output) {
+  exec('echo \'{"foo": "bar"}\n{"baz": "taco"}\' | node ../cli.js \'this.keys = this.keys.concat(Object.keys(current))\' --memo \'{"keys": []}\'', function(err, output) {
     t.equal(output, '{"keys":["foo","baz"]}\n', '--memo cli parameter')
   })
 })
