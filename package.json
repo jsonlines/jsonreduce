@@ -1,6 +1,6 @@
 {
   "name": "jsonreduce",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "streaming command line newline-delimited json reducing utility",
   "bin": {
     "jsonreduce": "cli.js"
